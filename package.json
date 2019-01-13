@@ -1,5 +1,5 @@
 {
-  "name": "framework",
+  "name": "sat-vocabulary-words",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,9 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Booker Robinson",
   "license": "ISC"
 }
