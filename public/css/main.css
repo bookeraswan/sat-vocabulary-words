@@ -28,6 +28,13 @@ p{
   font-size: 40px;
 }
 
+a{
+  float: right;
+  margin: -20px 50px;
+  color: #005;
+  font-size: 30px;
+}
+
 .sat{
   color: #080;
   font-family: sans-serif;

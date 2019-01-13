@@ -28,4 +28,4 @@ app.get("/api/word", function(req, res){
   res.json(randomWord);
 });
 
-app.listen(2000, () => {console.log("api test app server started...")});
+app.listen(process.env.PORT, process.env.IP, () => {console.log("api test app server started...")});
