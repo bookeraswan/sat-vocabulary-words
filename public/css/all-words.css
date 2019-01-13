@@ -1,0 +1,16 @@
+body{
+  font-size: 30px;
+  font-family: monospace;
+  color: #222;
+  background-color: #ddd;
+}
+h1{
+  text-align: center;
+}
+.word{
+  display: inline-block;
+  margin-right: 50px;
+}
+aside{
+  display: inline-block;
+}
