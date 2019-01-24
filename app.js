@@ -15,7 +15,20 @@ app.get("/api", function(req, res){
 });
 
 app.post("/api", function(req, res){
-  console.log(req.body);
+  var arrOfWords = satWordList.reduce(function(acc, val){
+    acc.push(val.word);
+    return acc;
+  }, []);
+  var wordIndex = arrOfWords.indexOf(req.body.word);
+  if(wordIndex != -1){
+    if(wordIndex == 0){
+      satWordList.splice(0, 1);
+    }
+    else{
+      satWordList.splice(wordIndex, 1);
+    }
+  }
+    res.json({list: satWordList});
 });
 
 app.get("/all", function(req, res){
@@ -23,9 +36,14 @@ app.get("/all", function(req, res){
 });
 
 app.get("/api/word", function(req, res){
-  var randomIndex = Math.floor(Math.random() * satWordList.length);
-  var randomWord = satWordList[randomIndex];
-  res.json(randomWord);
+  if(satWordList.length > 0){
+    var randomIndex = Math.floor(Math.random() * satWordList.length);
+    var randomWord = satWordList[randomIndex];
+    res.json(randomWord);
+  }
+  else{
+    res.json({word: "You finnished the list!!!", definition: "Your done with this list!!!"});
+  }
 });
 
 app.listen(process.env.PORT, process.env.IP, () => {console.log("api test app server started...")});

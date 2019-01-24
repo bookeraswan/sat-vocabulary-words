@@ -9,7 +9,7 @@ function Ajax(method, url, data) {
             resolve(JSON.parse(XHR.responseText));
           }
           else{
-            reject(Error(`Error!!! Status code: ${XHR.status}`));
+            reject(Error(`Status code ${XHR.status}`));
           }
         }
       }
